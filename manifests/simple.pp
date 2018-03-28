@@ -16,10 +16,10 @@ application wordpress_app::simple(
     export      => Http["web-${name}"],
     consume     => Database["db-${name}"],
   }
-  wordpress_app::lb { $name:
-    balancermembers => [Http["web-${name}"]],
-    port            => $lb_port,
-    require         => Http["web-${name}"],
-    export          => Http["lb-${name}"],
-  }
+#  wordpress_app::lb { $name:
+#    balancermembers => [Http["web-${name}"]],
+#    port            => $lb_port,
+#    require         => Http["web-${name}"],
+#    export          => Http["lb-${name}"],
+#  }
 }

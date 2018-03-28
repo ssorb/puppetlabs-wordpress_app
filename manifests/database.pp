@@ -9,7 +9,7 @@ define wordpress_app::database(
   mysql_database { $database:
     name    => $database,
     charset => 'utf8',
-    require => Class[::Mysql::Server],
+    require => Class[Mysql::Server],
   } ->
 
   mysql_user { $user_host:

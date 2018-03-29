@@ -9,12 +9,12 @@ application wordpress_app::simple(
     database => $database,
     user     => $db_user,
     password => $db_pass,
-    export   => Database["db-${name}"]
+    export   => Database["db_${name}"]
   }
   wordpress_app::web { $name:
     apache_port => $web_port,
-    export      => Http["web-${name}"],
-    consume     => Database["db-${name}"],
+    export      => Http["web_${name}"],
+    consume     => Database["db_${name}"],
   }
 #  wordpress_app::lb { $name:
 #    balancermembers => [Http["web-${name}"]],

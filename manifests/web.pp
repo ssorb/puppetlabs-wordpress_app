@@ -4,8 +4,8 @@ define wordpress_app::web(
   String $db_name,
   String $db_user,
   String $db_password,
-  String $apache_port = '8080',
-  String $interface = '',
+  String $apache_port = '80',
+  String $interface = 'eth1',
 ) {
   include wordpress_app::web_profile
 

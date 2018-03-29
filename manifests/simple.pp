@@ -2,7 +2,7 @@ application wordpress_app::simple(
   String $database = 'wordpress',
   String $db_user  = 'wordpress',
   String $db_pass  = 'wordpress',
-  String $web_port = '8080',
+  String $web_port = '80',
   String $lb_port  = '80',
 ) {
   wordpress_app::database { $name:
